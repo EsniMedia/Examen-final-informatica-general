@@ -1,1 +1,0 @@
-# Examen-final-informatica-general
