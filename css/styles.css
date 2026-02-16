@@ -1,0 +1,188 @@
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Capa 1: Color (20%) sobre Capa 2: Imagen (45%) */
+    background: 
+        linear-gradient(#b0e9ff7e, #b0e9ff7e), 
+        url('../img/invasiones-inglesas-1807.jpg');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.30; /* Aquí aplicamos el 45% de opacidad general de la imagen */
+    z-index: -1; 
+}
+
+header{
+    background-color: #6CACE4;
+    border-bottom-left-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+    height: 6em;
+
+}
+h1{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600 !important;
+}
+h5{
+    font-family: "Nunito", sans-serif;
+    font-size: 2.3em !important;
+    font-weight: 800 !important;
+    color: #00406E;
+}
+p{
+    font-family: "Montserrat", sans-serif;
+}
+
+nav ul li{
+    font-size: 1.5em;
+    padding: 0 1.7em;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    color: #f0f0f0; 
+}
+nav ul li a{
+    color: #f0f0f0;
+}
+
+.section-inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin: 5em 0 0 3em;
+    width: 60%;
+    
+}
+.section-inicio p{
+    max-width: 31.25em;
+    font-weight: 600 !important;
+    font-size: 1.3em;
+    color: #00406E;
+}
+
+.section-inicio button{
+    background-color: #3943B7;
+    color: #f0f0f0;
+    font-size: 1.5em;
+    width: 13.625em;
+    height: 3.375em;
+    border-radius: 4em;
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    border: none;
+    
+}
+.section-inicio h5:last-of-type{
+    color: #3943B7 !important;
+    padding: 1.5em 0em 1em 0em ;
+}
+
+
+.container-fluid{
+    margin: 4em 0em 0em 0em;
+    padding: 0em 0em 0em 1em !important;
+}
+
+.contenedor-flotante{
+    width: 40%;
+    display: flex   ;
+}
+.section-land {
+    margin: 2em 0em 0em 0em;
+    width: 100%; /* O el ancho que prefieras */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #6CACE470;
+    z-index: 5;
+    padding: 3em 0em 0em 3em;
+    border-radius: 2em 0em 0em 0em;
+    overflow: hidden;
+}
+
+.carta-valoracion{
+    max-width: 85% !important;
+    border-radius: 1.6em !important;
+    margin: 1em 0em 0em 0em !important;
+}
+
+.tag-card{
+    background-color: #6CACE4 !important;
+    color: #f0f0f0 !important;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600 !important;
+    font-size: 1em !important;
+}
+
+.carta-valoracion:hover{
+     box-shadow: 0em 0em 14em 0em #00406E;
+      transform: translateY(-5px);
+}
+
+.imagen-header{
+    width: 100%;
+    height: 9em;
+    background-image: linear-gradient(0deg,rgba(108, 172, 228, 1) 16%, rgba(255, 255, 255, 0) 100%), 
+                    url('../img/header-img.webp');
+    
+}
+
+
+footer {
+    position: relative;
+    z-index: 10; /* Para que quede por encima de la imagen de fondo */
+    background-color: #6CACE4; /* O el color que elijas */
+    padding: 2em 0;
+    width: 100%;
+
+}
+footer img{
+    max-height: 3em;
+}
+
+.nav-footer nav ul li{
+    font-size: 1em;
+    padding: 0 1.7em;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    color: #f0f0f0; 
+}
+
+footer {
+    background-color: #6CACE4; /* El color que ya tenías */
+    width: 100%;
+}
+
+.contacto-footer h6 {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contacto-footer a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+/* Para que la lista del nav se vea horizontal también dentro del footer */
+.nav-footer ul {
+    display: flex;
+    flex-wrap: wrap; /* Por si la pantalla es chica, que bajen y no se rompan */
+    justify-content: center;
+}
+
+.nav-footer ul li a {
+    color: #f0f0f0;
+    font-family: "Rubik", sans-serif;
+}
