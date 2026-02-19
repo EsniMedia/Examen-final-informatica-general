@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Comunidad - Relatos de mayo</title>
+    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <!--HEADER-->
 <div class="imagen-header">
     
@@ -22,36 +21,57 @@
     </h1>
     <nav>
         <ul class="d-flex list-unstyled mb-0">
-            <li class="ms-3"><a href="" class="text-decoration-none">Inicio</a></li>
-            <li class="ms-3"><a href="pages/archivo-multimedial.html" class="text-decoration-none">Archivo Multimedial</a></li>
-            <li class="ms-3"><a href="pages/comunidad.html" class="text-decoration-none">Comunidad</a></li>
-            <li class="ms-3"><a href="pages/hitos.html" class="text-decoration-none">Hitos</a></li>
-            <li class="ms-3"><a href="pages/gastronomia.html" class="text-decoration-none">Gastronomía</a></li>
-            <li class="ms-3"><a href="pages/museos.html" class="text-decoration-none">Museos</a></li>
-            <li class="ms-3"><a href="pages/juegos.html" class="text-decoration-none">Juegos</a></li>
+            <li class="ms-3"><a href="../index.html" class="text-decoration-none">Inicio</a></li>
+            <li class="ms-3"><a href="archivo-multimedial.html" class="text-decoration-none">Archivo Multimedial</a></li>
+            <li class="ms-3"><a href="comunidad.html" class="text-decoration-none">Comunidad</a></li>
+            <li class="ms-3"><a href="hitos.html" class="text-decoration-none">Hitos</a></li>
+            <li class="ms-3"><a href="gastronomia.html" class="text-decoration-none">Gastronomía</a></li>
+            <li class="ms-3"><a href="museos.html" class="text-decoration-none">Museos</a></li>
+            <li class="ms-3"><a href="juegos.html" class="text-decoration-none">Juegos</a></li>
         </ul>
     </nav>
 </header>
-    <div class="container-fluid">
-            <!--CONTENEDOR PRINCIPAL-->
-            <div class="d-flex justify-content-between align-items-start">
-                <!--COLUMNA1-->
-                <section class="section-inicio">
-                    <h5>¡La historia la escribimos entre todos!</h5>
-                    <p>¿Tenes fotografías antiguas, documentos o relatos que merecen ser recordados? Nuestro archivo crece con tu aporte. Súmate a esta red cultural compartiendo material multimedia o escribiendo sobre los hitos de tu comunidad.</p>
-                    <h5>Ayudanos a digitalizar nuestra memoria.</h5>
-                    <button>¡CONTACTÁNOS!</button>
+    
+<div class="container-fluid contenedor-comunidad">
 
-                </section>
-                <!--COLUMNA2-->
-                <div class="contenedor-flotante">
-                    <section class="section-land">
-                        <h5>Mejores Valoraciones</h5>
-                        <article>
-                                <div class="carta-valoracion card mb-3 border-0 shadow-sm">
+                        <div class="card shadow-sm cuadro-filtros">
+                    <div class="card-body">
+                        <h5 class="card-title">Filtros</h5>
+                        
+                        <div class="mb-3">
+                        <input type="text" id="filterSearch" class="form-control" placeholder="Buscar categoría...">
+                        </div>
+
+                        <div class="list-group list-group-flush overflow-auto" style="max-height: 300px;">
+                        <label class="list-group-item d-flex gap-2">
+                            <input class="form-check-input flex-shrink-0" type="checkbox" value="diseno">
+                            <span>Diseño Multimedia</span>
+                        </label>
+                        <label class="list-group-item d-flex gap-2">
+                            <input class="form-check-input flex-shrink-0" type="checkbox" value="web">
+                            <span>Desarrollo Web</span>
+                        </label>
+                        <label class="list-group-item d-flex gap-2">
+                            <input class="form-check-input flex-shrink-0" type="checkbox" value="video">
+                            <span>Video Arte</span>
+                        </label>
+                        </div>
+                    </div>
+                        </div>
+                        <!--CARTAS GALLERY-->
+
+                    <div class="carpeta-contenedor">
+                        <div class="links-blog">
+                            <ul>
+                            <li class="list-unstyled link-carpetas-on">Historias</li>
+                            <li class="list-unstyled link-carpetas-off">Blog</li>
+                            </ul>
+                        </div>
+                    <div class="contenedor-blog-card">
+                            <div class="carta-valoracion card mb-3 border-0 shadow-sm">
                                     <div class="row no-gutters">
                                         <div class="col-md-4">
-                                        <img src="img/catedral-sanjuan-derrumbada-1944.jpg" class="card-img" alt="Derrumbe Catedral">
+                                        <img src="../img/catedral-sanjuan-derrumbada-1944.jpg" class="card-img" alt="Derrumbe Catedral" style="border-radius: 20px 0 0 20px; height: 100%; object-fit: cover;">
                                         </div>
                                         
                                         <div class="col-md-8">
@@ -75,7 +95,7 @@
                                 <div class="carta-valoracion card mb-3 border-0 shadow-sm">
                                     <div class="row no-gutters">
                                         <div class="col-md-4">
-                                        <img src="img/catedral-sanjuan-derrumbada-1944.jpg" class="card-img" alt="Derrumbe Catedral">
+                                        <img src="../img/catedral-sanjuan-derrumbada-1944.jpg" class="card-img" alt="Derrumbe Catedral" style="border-radius: 20px 0 0 20px; height: 100%; object-fit: cover;">
                                         </div>
                                         
                                         <div class="col-md-8">
@@ -96,20 +116,42 @@
                                     </div>
                                 </div>
 
-                        </article>
+                                <div class="carta-valoracion card mb-3 border-0 shadow-sm">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-4">
+                                        <img src="../img/catedral-sanjuan-derrumbada-1944.jpg" class="card-img" alt="Derrumbe Catedral" style="border-radius: 20px 0 0 20px; height: 100%; object-fit: cover;">
+                                        </div>
+                                        
+                                        <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title mb-1">Derrumbe Catedral</h5>
+                                            
+                                            <span class="tag-card badge badge-pill badge-light mb-2">San juan</span>
+                                            
+                                            <div class="text-warning mb-2">
+                                            <span>★</span><span>★</span><span>★</span><span>★</span><span class="text-muted">★</span>
+                                            </div>
+                                            
+                                            <p class="card-text small text-secondary">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...
+                                            </p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
 
-                    </section>
-                </div>
-            </div>
-    </div>
+                    </div>
+</div>
 
-    <div class="contenedor-invisible">
+</div>
 
-    </div>
 
-    <!--FOOTER-->
+
+
+<!--FOOTER-->
 <footer class="d-flex justify-content-between align-items-center px-5 py-4">
-    <img src="img/ecudo-argentina.png" alt="Escudo Argentina">
+    <img src="../img/ecudo-argentina.png" alt="Escudo Argentina">
 
     <section class="contacto-footer d-flex flex-column">
         <h6>Contacto</h6>
@@ -131,7 +173,5 @@
         </nav>
     </section>
 </footer>
-
-
 </body>
 </html>
