@@ -198,7 +198,11 @@ footer {
 .cuadro-filtros{
     width: 20%;
     max-width: 20em;
+    background-color: #f0f0f0 !important;
+    border-radius: 1em 1em 0em 0em !important;
 }
+
+
 
 .contenedor-comunidad{
     display: flex;
@@ -270,4 +274,14 @@ footer {
     border: none;
 }
 
+.sinopsis{
+      font-family: "Montserrat", sans-serif !important;
+      font-weight: 600 !important;
+}
 
+.carta-valoracion .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hace que la imagen se recorte para llenar el espacio sin estirarse */
+    object-position: center; /* Centra el encuadre de la foto */
+}
