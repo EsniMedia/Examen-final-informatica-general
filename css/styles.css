@@ -1,7 +1,7 @@
 body {
     position: relative;
     min-height: 100vh;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif !important;
 }
 
 body::before {
@@ -297,7 +297,7 @@ footer {
 }
 
 .oculto{
-    display: none;
+    display: none !important;
 }
 
 .list-group-item{
@@ -348,4 +348,50 @@ svg{
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5em;
+}
+
+.perfil{
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+    align-items: start;
+    gap: 1em;
+    color: #f0f0f0;
+}
+
+.perfil img{
+    border-radius: 100em;
+    height: 2em;
+    
+}
+
+.titulo-historias{
+    font-weight: 600;
+    font-size: 3em;
+    color: #00406E;
+
+
+}
+
+.parrafo-historia{
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #f0f0f0;
+}
+
+.archivo-contenedor-historias{
+    margin: 0em 0em 0em 30em;    
+}
+
+.foto-individual{
+    width: 20em;
+    max-width: 20em;
+
+}
+
+.foto-individual img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hace que la imagen se recorte para llenar el espacio sin estirarse */
+    object-position: center; /* Centra el encuadre de la foto */
 }
