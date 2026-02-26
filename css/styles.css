@@ -384,8 +384,8 @@ svg{
 }
 
 .foto-individual{
-    width: 20em;
-    max-width: 20em;
+    width: 25em;
+    max-width: 25em;
 
 }
 
@@ -394,4 +394,126 @@ svg{
     height: 100%;
     object-fit: cover; /* Esto hace que la imagen se recorte para llenar el espacio sin estirarse */
     object-position: center; /* Centra el encuadre de la foto */
+    border-radius: 1em;
+}
+
+/*MEIDAQUERY*/
+@media (max-width: 375px){
+
+    body{
+        max-width: 375px;
+    }
+
+    h1{
+        font-size: 1.3em !important;
+        max-width: 2em;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding: 0em 0em 0em 3em !important;
+        color: #f0f0f0;
+        font-weight: 700 !important;
+    }
+
+    header {
+        flex-wrap: wrap; /* Permite que el menú baje si no entra */
+        max-width: 375px;
+        width: 100%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    nav.collapse.show {
+        width: 100%; /* Que ocupe todo el ancho al abrirse */
+    }
+
+    header ul {
+        flex-direction: column; /* Links uno abajo del otro en móvil */
+        padding-top: 1rem;
+        gap: 1em; /* Espaciado entre links */
+    }
+
+    header ul li {
+        margin-left: 0 !important; /* Quitamos el margen lateral en móvil */
+    }
+    .custom-toggler {
+    padding: 0.4em;
+    border-radius: 1em;
+}
+
+    .toggler-icon {
+        width: 1.8em;
+        height: 0.4em;
+        background-color: white; /* <--- CAMBIA ESTO si tu fondo es blanco (poné black) */
+        display: block;
+        margin: 0.4em 0;
+    }
+
+    .archivo-contenedor{
+        flex-direction: column !;
+    }
+
+
+    .navbar-collapse.collapsing, 
+    .navbar-collapse.show {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #6cace4;
+        z-index: 1050;
+        
+        /* CAMBIOS AQUÍ: */
+        display: flex !important;
+        flex-direction: column;
+        justify-content: flex-start; /* Empezamos desde arriba para dar espacio */
+        align-items: start;
+        
+        /* Esto permite scrollear si los links no entran */
+        overflow-y: auto; 
+        padding-top: 80px; /* Espacio para que el título no tape el primer link */
+        padding-bottom: 50px; /* Margen abajo para que el último link no quede pegado */
+    }
+
+    .custom-toggler {
+        position: relative;
+        z-index: 1100; 
+    }
+
+    .contenedor-principal-index{
+        flex-direction: column;
+
+    
+    }
+
+    .section-inicio button{
+        width: 80%;
+        font-size: 1em;
+    }
+
+    .section-inicio{
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 0em;
+    }
+    
+    .contenedor-flotante{
+        width: 100%;
+    }
+    
+    .carta-valoracion img{
+    max-height: 18em;
+    border-radius: 1.6em 1.6em 0em 0em;
+    }
+
+    .sinopsis{
+    white-space: nowrap;       /* Evita que el texto salte de línea */
+    overflow: hidden;          /* Esconde lo que sobra */
+    text-overflow: ellipsis;   /* Agrega los "..." al final */
+    width: 100%;               /* Necesita un ancho definido */
+}
 }

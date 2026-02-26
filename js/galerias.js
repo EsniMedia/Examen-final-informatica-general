@@ -4,8 +4,8 @@ document.querySelectorAll('.carrusel.individual').forEach(cuadro => {
         // Si el click no fue en un control...
         if (!e.target.closest('.carousel-control-next') && !e.target.closest('.carousel-control-prev')) {
             // Obtenemos la región (caba, jujuy, etc) y armamos la URL automáticamente
-            const region = cuadro.getAttribute('data-region').toLowerCase();
-            window.location.href = `${region}/index.html`;
+            const provincia = cuadro.getAttribute('data-provincia').toLowerCase();
+            window.location.href = `${provincia}/index.html`;
         }
     });
 });
