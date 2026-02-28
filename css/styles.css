@@ -402,11 +402,89 @@ svg{
     border-radius: 2em 0em 0em 0em;
 }
 
+.iframe-maps{
+    border-radius: 0em 0em 1em 1em !important;
+    width: 100%;
+}
+
+.card-img-museo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hace que la imagen se recorte para llenar el espacio sin estirarse */
+    object-position: center; /* Centra el encuadre de la foto */
+    border-radius: 1em 0em 0em 0em !important;
+}
+
+.contenedor-juegos{
+    margin-top: 5em;
+}
+
+.tt-juegos{
+    text-align: center;
+}
+
+#tablero-juego {
+    display: grid;
+    /* Esto crea 4 columnas de igual tamaño automáticamente */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px; /* Espacio entre cartas */
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.carta {
+    aspect-ratio: 1 / 1; /* Para que sean cuadraditas */
+    position: relative;
+    transform-style: preserve-3d; /* Clave para el efecto 3D */
+    transition: transform 0.5s;  /* Duración del giro */
+    cursor: pointer;
+}
+
+/* Esta clase la agregaremos con JS luego */
+.carta.volteada {
+    transform: rotateY(180deg);
+}
+
+
+.cara {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* No deja ver el "atrás" de la cara */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+/* El dorso (lo que se ve al principio) */
+.dorso {
+    background-color: #2c3e50; /* Color de respaldo por si falla la imagen */
+    background-image: url('ruta-de-tu-logo.jpg'); 
+    background-size: cover;    /* Clave: la imagen cubre toda la carta */
+    background-position: center;
+}
+
+.frente {
+    background-color: #ecf0f1;
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg); /* Se mantiene igual */
+}
+
 /*MEIDAQUERY*/
 @media (max-width: 375px){
 
     body{
         max-width: 375px;
+    }
+
+    .card-img-museo{
+        border-radius: 1em 1em 0em 0em !important;
+    }
+
+    .contenedor-recetas{
+        border-radius: 1em 1em 0em 0em;
     }
 
     h1{
@@ -598,5 +676,9 @@ form{
 
 .form-control{
     width: 80% !important;
+}
+
+h5{
+    font-size: 2em !important;
 }
 }
