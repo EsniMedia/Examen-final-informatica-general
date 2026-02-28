@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Seleccionamos los elementos según TU HTML
     const checkboxes = document.querySelectorAll('.form-check-input');
-    const elementosAFiltrar = document.querySelectorAll('.carrusel.individual');
+    const elementosAFiltrar = document.querySelectorAll('.carrusel-individual');
     const buscador = document.getElementById('filterSearch');
 
     function aplicarFiltros() {
         // Obtenemos qué regiones están marcadas (las pasamos a minúsculas para comparar fácil)
         const regionesSeleccionadas = Array.from(checkboxes)
-            .filter(input => input.checked)
+            .filter(i => i.checked)
             .map(input => input.value.toLowerCase());
 
         // Obtenemos lo que se escribió en el buscador

@@ -15,19 +15,26 @@
 <div class="imagen-header">
     
 </div>
-<header class="d-flex align-items-center justify-content-between px-4 py-2">
+<header class="navbar navbar-expand-lg d-flex align-items-center justify-content-between px-4 py-2">
     <h1 class="mb-0">
         RELATOS DE MAYO
     </h1>
-    <nav>
-        <ul class="d-flex list-unstyled mb-0">  
-            <li class="ms-3"><a href="../../index.html" class="text-decoration-none">Inicio</a></li>
-            <li class="ms-3"><a href="../../archivo-multimedial/index.html" class="text-decoration-none">Archivo Multimedial</a></li>
-            <li class="ms-3"><a href="../../comunidad/index.html" class="text-decoration-none">Comunidad</a></li>
-            <li class="ms-3"><a href="../../hitos/index.html" class="text-decoration-none">Hitos</a></li>
-            <li class="ms-3"><a href="../../gastronomia/index.html" class="text-decoration-none">Gastronomía</a></li>
-            <li class="ms-3"><a href="../../museos/index.html" class="text-decoration-none">Museos</a></li>
-            <li class="ms-3"><a href="../../juegos/index.html" class="text-decoration-none">Juegos</a></li>
+
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#menuPrincipal">
+        <span class="toggler-icon"></span>
+        <span class="toggler-icon"></span>
+        <span class="toggler-icon"></span>
+    </button>
+
+    <nav class="collapse navbar-collapse justify-content-end" id="menuPrincipal">
+         <ul class="d-flex list-unstyled mb-0 navbar-nav">  
+            <li class="ms-3"><a href="/index.html" class="text-decoration-none">Inicio</a></li>
+            <li class="ms-3"><a href="/archivo-multimedial/index.html" class="text-decoration-none">Archivo Multimedial</a></li>
+            <li class="ms-3"><a href="/comunidad/index.html" class="text-decoration-none">Comunidad</a></li>
+            <li class="ms-3"><a href="/hitos/index.html" class="text-decoration-none">Hitos</a></li>
+            <li class="ms-3"><a href="/gastronomia/index.html" class="text-decoration-none">Gastronomía</a></li>
+            <li class="ms-3"><a href="/museos/index.html" class="text-decoration-none">Museos</a></li>
+            <li class="ms-3"><a href="/juegos/index.html" class="text-decoration-none">Juegos</a></li>
         </ul>
     </nav>
 </header>
@@ -36,7 +43,7 @@
 
 <div class="container-fluid contenedor-comunidad">
 
-                        <div class="card shadow-sm cuadro-filtros">
+                         <div class="card shadow-sm cuadro-filtros">
                     <div class="card-body">
                         <h5 class="card-title">Filtros</h5>
                         
@@ -46,16 +53,16 @@
 
                         <div class="list-group list-group-flush overflow-auto">
                         <label class="list-group-item d-flex gap-2">
-                            <input class="form-check-input flex-shrink-0" type="checkbox" value="1950-1960">
-                            <span>1950-1960</span>
+                            <input class="form-check-input flex-shrink-0" type="checkbox" value="Paisaje">
+                            <span>Paisaje</span>
                         </label>
                         <label class="list-group-item d-flex gap-2">
-                            <input class="form-check-input flex-shrink-0" type="checkbox" value="1960-1970">
-                            <span>1960-1970</span>
+                            <input class="form-check-input flex-shrink-0" type="checkbox" value="Urbano">
+                            <span>Urbano</span>
                         </label>
                         <label class="list-group-item d-flex gap-2">
-                            <input class="form-check-input flex-shrink-0" type="checkbox" value="1970-1980">
-                            <span>1970-1980</span>
+                            <input class="form-check-input flex-shrink-0" type="checkbox" value="Arquitectura">
+                            <span>Arquitectura</span>
                         </label>
                         </div>
                     </div>
@@ -70,13 +77,30 @@
                         </div>
                         <div class="contenedor-fotos">
                          <!--CARRUSEL CORDOBA-->
-                            <div class="foto-individual">
-                                <img src="../../img/caba/iglesia-buschiazzo-caba.jpg">
+                            <div class="foto-individual"  data-category="Arquitectura">
+                                <img src="../../img/cordoba/legislatura-cordoba.jpg" alt="legislatura-cordoba">
                             </div>
 
-                            <div class="foto-individual ">
-                                <img src="../../img/caba/iglesia-buschiazzo-caba-2.jpg">
+                            <div class="foto-individual" data-category="Arquitectura">
+                                <img src="../../img/cordoba/cordoba-cabildo.jpeg" alt="cordoba-cabildo">
                             </div>
+
+                            <div class="foto-individual" data-category="Urbano">
+                                <img src="../../img/cordoba/cordoba-burro.webp" alt="cordoba-burro">
+                            </div>
+
+                            <div class="foto-individual" data-category="Paisaje">
+                                <img src="../../img/cordoba/paso-del-indio.jfif" alt="paso-del-indio">
+                            </div>
+
+                            <div class="foto-individual" data-category="Paisaje">
+                                <img src="../../img/cordoba/sierras-1.avif" alt="sierras-1">
+                            </div>
+
+                            <div class="foto-individual" data-category="Paisaje">
+                                <img src="../../img/cordoba/editar.jpg" alt="villa-carlos-paz">
+                            </div>
+                            
                         </div>    
                                 
                     </div>
@@ -91,7 +115,7 @@
 
 <!--FOOTER-->
 <footer class="d-flex justify-content-between align-items-center px-5 py-4">
-    <img src="../img/ecudo-argentina.png" alt="Escudo Argentina">
+    <img src="/img/ecudo-argentina.png" alt="Escudo Argentina">
 
     <section class="contacto-footer d-flex flex-column">
         <h6>Contacto</h6>
@@ -114,7 +138,7 @@
     </section>
 </footer>
 
-
+<script src="../../js/filters-archivo-fotos.js"></script>
 <script src="../../js/flecha-back.js"></script>
 </body>
 </html>

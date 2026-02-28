@@ -397,6 +397,11 @@ svg{
     border-radius: 1em;
 }
 
+
+.contenedor-recetas{
+    border-radius: 2em 0em 0em 0em;
+}
+
 /*MEIDAQUERY*/
 @media (max-width: 375px){
 
@@ -515,5 +520,83 @@ svg{
     overflow: hidden;          /* Esconde lo que sobra */
     text-overflow: ellipsis;   /* Agrega los "..." al final */
     width: 100%;               /* Necesita un ancho definido */
+}
+
+
+.cuadro-filtros {
+        width: 100% !important; /* Que ocupe todo el ancho en mobile */
+        max-width: none;
+        margin: 1em 0; /* Espaciado vertical */
+    }
+    
+    .contenedor-comunidad {
+        flex-direction: column; /* Asegura que los filtros queden arriba del contenido */
+        gap: 2em;
+
+    }
+
+
+    .links-blog ul{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contenedor-blog-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .carrusel-individual{
+        width: 90%;
+    }
+
+    .titulo-carrusel p{
+    font-size: 1em !important;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap !important;      /* Evita que el texto salte de línea */
+    overflow: hidden !important;          /* Esconde lo que sobra */
+    text-overflow: ellipsis !important;   /* Agrega los "..." al final */
+    width: 100%;               /* Necesita un ancho definido */
+    
+    }
+
+    .archivo-contenedor{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .archivo-contenedor-historias{
+    margin: 0em 0em 0em 0em;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-historias{
+    font-size: 1.8em;
+}
+.archivo-contenedor-historias p{
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.foto-blogs{
+    max-width: 15em;
+}
+
+.formulario-contacto{
+    width: 100%;
+}
+
+form{
+    width: 100% !important;
+}
+
+.form-control{
+    width: 80% !important;
 }
 }

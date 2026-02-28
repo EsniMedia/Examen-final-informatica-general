@@ -1,5 +1,5 @@
 // Seleccionamos todos los carruseles que tengan data-region
-document.querySelectorAll('.carrusel.individual').forEach(cuadro => {
+document.querySelectorAll('.carrusel-individual').forEach(cuadro => {
     cuadro.addEventListener('click', (e) => {
         // Si el click no fue en un control...
         if (!e.target.closest('.carousel-control-next') && !e.target.closest('.carousel-control-prev')) {
