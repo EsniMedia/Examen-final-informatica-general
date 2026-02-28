@@ -33,6 +33,7 @@ header{
 h1{
     font-family: "Montserrat", sans-serif;
     font-weight: 600 !important;
+    color: #f0f0f0;
 }
 h5{
     font-family: "Nunito", sans-serif;
@@ -423,55 +424,105 @@ svg{
     text-align: center;
 }
 
+/* Contenedor principal centrado */
+.elementos-juego {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    width: 100%;
+    padding: 3em; /* El padding que pediste */
+    min-height: 100vh;
+    font-weight: 600;
+}
+.puntos-color{
+    color: #6cace4 !important;
+}
+.elementos-juego p:first-of-type{
+        font-size: 2em;
+        color: #f0f0f0
+}
+.elementos-juego h2{
+    font-size: 2.5em;
+    color: #f0f0f0;
+}
+
+/* Los marcadores uno al lado del otro */
+.marcadores {
+    width: 100%;
+    max-width: 800px; /* Para que no se estiren al infinito en PC */
+    display: flex;
+    justify-content: space-around !important;
+}
+
+/* El tablero ocupando el 100% del contenedor padre */
+.tablero-estilos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 #tablero-juego {
     display: grid;
-    /* Esto crea 4 columnas de igual tamaño automáticamente */
     grid-template-columns: repeat(4, 1fr); 
-    gap: 10px; /* Espacio entre cartas */
-    max-width: 500px;
-    margin: 20px auto;
+    gap: 15px;
+    width: 100%;
+    max-width: 600px; /* Tamaño máximo razonable para que no colapse */
+    margin-top: 20px;
 }
 
 .carta {
-    aspect-ratio: 1 / 1; /* Para que sean cuadraditas */
+    aspect-ratio: 3 / 4;
     position: relative;
-    transform-style: preserve-3d; /* Clave para el efecto 3D */
-    transition: transform 0.5s;  /* Duración del giro */
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
     cursor: pointer;
 }
 
-/* Esta clase la agregaremos con JS luego */
 .carta.volteada {
     transform: rotateY(180deg);
 }
-
 
 .cara {
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden; /* No deja ver el "atrás" de la cara */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    backface-visibility: hidden;
     border-radius: 8px;
+    background-size: cover;
+    background-position: center;
 }
 
-/* El dorso (lo que se ve al principio) */
 .dorso {
-    background-color: #2c3e50; /* Color de respaldo por si falla la imagen */
-    background-image: url('ruta-de-tu-logo.jpg'); 
-    background-size: cover;    /* Clave: la imagen cubre toda la carta */
-    background-position: center;
+    background-color: #2c3e50;
+    /* Usamos una sola imagen de dorso para todas */
+    background-image: url('../img/juegos/memotest/dorso.webp'); 
 }
 
 .frente {
     background-color: #ecf0f1;
-    background-size: cover;
-    background-position: center;
-    transform: rotateY(180deg); /* Se mantiene igual */
+    transform: rotateY(180deg);
 }
 
+.jugador-activo {
+    background-color: #00406E !important; /* #6CACE4 al 80% */
+    color: white !important;
+    transform: scale(1.05); /* Un pequeño efecto de aumento para el que juega */
+    transition: all 0.3s ease;
+    margin: 0em;
+    border: 0em;
+        font-family: "Montserrat", sans-serif !important;
+
+}
+
+/* Para que los puntos se vean bien sobre el celeste */
+
+
+.jugador-activo h5{
+    color: #f0f0f0;
+        font-family: "Montserrat", sans-serif !important;
+        font-size: 0.8em;
+
+}
 /*MEIDAQUERY*/
 @media (max-width: 375px){
 
@@ -681,4 +732,59 @@ form{
 h5{
     font-size: 2em !important;
 }
+
+    /* Reducimos el padding drásticamente para ganar ancho real */
+    .elementos-juego {
+        padding: 1em; 
+        margin-top: 1em;
+    }
+
+    /* Títulos más pequeños para que no empujen todo hacia abajo */
+    .elementos-juego h2 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+    .elementos-juego p{
+        text-align: center;
+    }
+
+    /* Marcadores: 2 columnas fijas para que los 4 entren en pantalla */
+    #marcador-multijugador {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px;
+        width: 100%;
+        margin-bottom: 1rem !important;
+    }
+
+    .marcadores .col {
+        padding: 8px !important;
+        margin: 0 !important;
+        min-width: 0; /* Evita que el contenido ensanche la columna */
+    }
+
+    .marcadores h5 {
+        font-size: 0.8em !important;
+    }
+    .puntos-color{
+        font-size: 0.9em !important;
+    }
+
+    /* Tablero: Pasamos de 4 a 2 columnas */
+    #tablero-juego {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 12px;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    /* Ajustamos la proporción para que no queden tan largas en 2 columnas */
+    .carta {
+        aspect-ratio: 1 / 1; 
+    }
+
+    p , h2 , h3 , h4{
+        text-align: center;
+    }
 }
+

@@ -45,7 +45,7 @@
 <div class="archivo-contenedor">
     
 
-    <div class="carrusel-individual" id="carrusel-preguntas" data-juegos="preguntas">
+    <div class="carrusel-individual oculto" id="carrusel-preguntas" data-juegos="preguntas">
         <div id="carouselCordoba" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -59,7 +59,7 @@
     </div>
 
 
-    <div class="carrusel-individual" id="carrusel-memo" data-juegos="memo">
+    <div class="carrusel-individual oculto" id="carrusel-memo" data-juegos="memo">
         <div id="carouselCordoba" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -73,30 +73,38 @@
     </div>
 
 
+<div class="elementos-juego">
+    <h2>Memorama!</h2>
+    <p>Encuentra los pares y suma puntos!</p>
+        <div id="configuracion" class="card p-4 mb-4 shadow-sm">
+                <h3>Configuración de la Partida</h3>
+            <div class="row g-3 align-items-end">
+                <div class="col-md-6">
+                    <label for="cantidad-jugadores" class="form-label">Número de Jugadores (1-4):</label>
+                    <select id="cantidad-jugadores" class="form-select">
+                        <option value="1">1 Jugador</option>
+                        <option value="2">2 Jugadores</option>
+                        <option value="3">3 Jugadores</option>
+                        <option value="4">4 Jugadores</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <button id="btn-comenzar" class="btn btn-success w-100">¡Comenzar Juego!</button>
+                </div>
+            </div>
+        </div>
 
-    <div id="configuracion" class="card p-4 mb-4 shadow-sm">
-    <h3>Configuración de la Partida</h3>
-    <div class="row g-3 align-items-end">
-        <div class="col-md-6">
-            <label for="cantidad-jugadores" class="form-label">Número de Jugadores (1-4):</label>
-            <select id="cantidad-jugadores" class="form-select">
-                <option value="1">1 Jugador</option>
-                <option value="2">2 Jugadores</option>
-                <option value="3">3 Jugadores</option>
-                <option value="4">4 Jugadores</option>
-            </select>
+        <div class="marcadores">
+            <div id="marcador-multijugador" class="row text-center mb-4">
+            </div>
         </div>
-        <div class="col-md-6">
-            <button id="btn-comenzar" class="btn btn-success w-100">¡Comenzar Juego!</button>
+
+        
+        <div class="tablero-estilos">
+        <div id="tablero-juego" class="memotest-grid">
         </div>
-    </div>
+        </div>
 </div>
-
-<div id="marcador-multijugador" class="row text-center mb-4">
-    </div>
-
-
-
 
 
 
@@ -142,13 +150,13 @@
     <section class="nav-footer">
         <nav>
             <ul class="d-flex list-unstyled mb-0 gap-3">
-                <li><a href="/archivo-multimedial.html" class="text-decoration-none px-2">Archivo</a></li>
-                <li><a href="/comunidad.html" class="text-decoration-none px-2">Comunidad</a></li>
-                <li><a href="/hitos.html" class="text-decoration-none px-2">Hitos</a></li>
-                <li><a href="/gastronomia.html" class="text-decoration-none px-2">Gastronomía</a></li>
-                <li><a href="/museos.html" class="text-decoration-none px-2">Museos</a></li>
-                <li><a href="/juegos.html" class="text-decoration-none px-2">Juegos</a></li>
-                <li><a href="/autor.html" class="text-decoration-none px-2">Autor</a></li>
+                <li><a href="/archivo-multimedial/index.html" class="text-decoration-none px-2">Archivo</a></li>
+                <li><a href="/comunidad/index.html" class="text-decoration-none px-2">Comunidad</a></li>
+                <li><a href="/hitos/index.html" class="text-decoration-none px-2">Hitos</a></li>
+                <li><a href="/gastronomia/index.html" class="text-decoration-none px-2">Gastronomía</a></li>
+                <li><a href="/museos/index.html" class="text-decoration-none px-2">Museos</a></li>
+                <li><a href="/juegos/index.html" class="text-decoration-none px-2">Juegos</a></li>
+                <li><a href="/autor/index.html" class="text-decoration-none px-2">Autor</a></li>
             </ul>
         </nav>
     </section>
