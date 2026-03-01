@@ -593,7 +593,7 @@ svg{
     }
 
     .archivo-contenedor{
-        flex-direction: column !;
+        flex-direction: column;
     }
 
 
