@@ -523,11 +523,20 @@ svg{
         font-size: 0.8em;
 
 }
+
+
+.fotos-historias{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5em;
+}
+
 /*MEIDAQUERY*/
-@media (max-width: 375px){
+@media (max-width: 480px){
 
     body{
-        max-width: 375px;
+        max-width: 480px;
     }
 
     .card-img-museo{
